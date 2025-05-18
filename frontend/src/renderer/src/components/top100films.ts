@@ -1,0 +1,30 @@
+const vst3Plugins = [
+  { label: 'Serum', developer: 'Xfer Records', type: 'Synthesizer' },
+  { label: 'Massive', developer: 'Native Instruments', type: 'Synthesizer' },
+  { label: 'Omnisphere', developer: 'Spectrasonics', type: 'Synthesizer' },
+  { label: 'Kontakt', developer: 'Native Instruments', type: 'Sampler' },
+  { label: 'HALion', developer: 'Steinberg', type: 'Sampler' },
+  { label: 'Sylenth1', developer: 'LennarDigital', type: 'Synthesizer' },
+  { label: 'FabFilter Pro-Q 3', developer: 'FabFilter', type: 'EQ' },
+  { label: 'Ozone 10', developer: 'iZotope', type: 'Mastering' },
+  { label: 'Neutron 4', developer: 'iZotope', type: 'Mixing' },
+  { label: 'Valhalla VintageVerb', developer: 'Valhalla DSP', type: 'Reverb' },
+  { label: 'EchoBoy', developer: 'Soundtoys', type: 'Delay' },
+  { label: 'RC-20 Retro Color', developer: 'XLN Audio', type: 'Saturation' },
+  { label: 'Reaktor', developer: 'Native Instruments', type: 'Modular Synth' },
+  { label: 'Guitar Rig 6', developer: 'Native Instruments', type: 'Amp Simulator' },
+  { label: 'Superior Drummer 3', developer: 'Toontrack', type: 'Drums' },
+  { label: 'Addictive Drums 2', developer: 'XLN Audio', type: 'Drums' },
+  { label: 'EZdrummer 3', developer: 'Toontrack', type: 'Drums' },
+  { label: 'Spire', developer: 'Reveal Sound', type: 'Synthesizer' },
+  { label: 'Arturia V Collection', developer: 'Arturia', type: 'Synth Collection' },
+  { label: 'Diva', developer: 'u-he', type: 'Synthesizer' },
+  { label: 'Hive 2', developer: 'u-he', type: 'Synthesizer' },
+  { label: 'Pigments', developer: 'Arturia', type: 'Synthesizer' },
+  { label: 'FXpansion BFD3', developer: 'FXpansion', type: 'Drums' },
+  { label: 'Softube Modular', developer: 'Softube', type: 'Modular Synth' },
+  { label: 'Phase Plant', developer: 'Kilohearts', type: 'Synthesizer' },
+  { label: 'TAL-NoiseMaker', developer: 'john', type: 'drums' }
+]
+
+export default vst3Plugins
