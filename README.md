@@ -79,3 +79,9 @@ Electron sends query to Flask
 Flask parses and maps query to the corresponding VST knob (e.g., Reverb_WetLevel)
 
 VST parameter is adjusted in real-time
+
+---
+
+## 📝 Screenshots
+
+![Screenshot 1](/SS/pic.jpg)
