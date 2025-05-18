@@ -4,20 +4,17 @@ import mido
 import time
 import json
 from flask_cors import CORS
+from apiKey import API_KEY
 
 app = Flask(__name__)
 CORS(app)
 
-# 🎹 Set up MIDI output
-MIDI_PORT = "loopMIDI Port 1 1"  # Adjust if needed
+MIDI_PORT = "loopMIDI Port 1 1" 
 midi_out = mido.open_output(MIDI_PORT)
 print(mido.get_output_names())
 
-# 🔑 Google Gemini API Key (Replace with your actual key)
-API_KEY = "AIzaSyBzRisNmv2lm0nw1fj4Kml_t-2V_KIQtn0"  # Replace with your actual API key
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
-# 🎛️ MIDI CC Mappings
 MIDI_CC_PARAMS = {
     "Cutoff": 74,       # Filter Cutoff
     "Resonance": 71,    # Filter Resonance
@@ -40,7 +37,7 @@ def change_preset(preset_number):
     midi_out.send(msg)
     print(f"🎛️ Switched to preset #{preset_number}")
 
-# 🎵 Function to send a MIDI Control Change (CC) message
+
 def send_cc(control, value):
     global display_values
     
@@ -57,21 +54,16 @@ def send_cc(control, value):
         if cc_num == control:
             display_values[key] = value
 
-    # preset_number = PRESET_MAPPING["CH Chordionator II FN.noisemakerpreset"]
 
-    # change_preset(preset_number)
-    
-    # Play the note
     midi_out.send(mido.Message('note_on', note=NOTE, velocity=VELOCITY))
     time.sleep(DURATION)
     
-    # Stop the note
     midi_out.send(mido.Message('note_off', note=NOTE, velocity=0))
     print(f"🎵 Stopped Note {NOTE}")
     
     time.sleep(0.5)
 
-# 🧠 Function to get MIDI values from LLM
+
 def get_llm_response(prompt):
     data = {"contents": [{"parts": [{"text": prompt}]}]}
     headers = {"Content-Type": "application/json"}
